@@ -1,4 +1,5 @@
 com/fju/Tester.java
  com.fju.Tester
-com/fju/Mainpain.java
- com.fju.Mainpain
+com/fju/Demogui.java
+ com.fju.Demogui
+ com.fju.Demogui$1
