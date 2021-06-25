@@ -2,4 +2,3 @@ com/fju/Tester.java
  com.fju.Tester
 com/fju/Demogui.java
  com.fju.Demogui
- com.fju.Demogui$1

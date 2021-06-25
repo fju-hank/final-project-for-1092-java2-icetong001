@@ -24,31 +24,31 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
-      <component id="f9812" class="javax.swing.JButton" binding="button2" default-binding="true">
+      <component id="f9812" class="javax.swing.JButton" binding="beerButton">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Beer"/>
         </properties>
       </component>
-      <component id="a73dd" class="javax.swing.JButton" binding="button3" default-binding="true">
+      <component id="a73dd" class="javax.swing.JButton" binding="colaButton" default-binding="true">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Cola"/>
         </properties>
       </component>
-      <component id="8f4ef" class="javax.swing.JButton" binding="button4" default-binding="true">
+      <component id="8f4ef" class="javax.swing.JButton" binding="okButton" default-binding="true">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="ok"/>
         </properties>
       </component>
     </children>
