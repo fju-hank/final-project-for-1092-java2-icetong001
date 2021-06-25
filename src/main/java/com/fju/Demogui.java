@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Demogui extends JFrame {
+public class Demogui<message> extends JFrame {
 
     private JButton okButton;
     private JPanel panelMain;
@@ -33,19 +33,42 @@ public class Demogui extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
+
+//ok buttom setting
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "How to pay?");
+                Object options[] = {"correct", "canel"};
+                JOptionPane.showOptionDialog(null, "Here is your order" + "\n" + "Applejuice :" + t1.getText() + "\n" + "Beer :" + t2.getText() + "\n" + "Cola :" + t3.getText(), "Order", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
             }
         });
     }
 
-    public boolean verfy(JComponent component) {
+    //    public boolean verfy(JComponent component) {
+//
+//        JFormattedTextField t1 = (JFormattedTextField) component;
+//        return false;
+//    }
 
-        JFormattedTextField t1 = (JFormattedTextField) component;
-        return false;
-    }
+
+//    public void message() {
+//        String num = JOptionPane.showInputDialog("name");
+//        String message = String.format("Welcome, %s, to me", num);
+//        System.out.println("message: " + message);
+//        JOptionPane.showMessageDialog(null, message);
+//
+//    }
+
+
+//    public void Buttunsetting() {
+//        JButton okButton = new JButton();
+//        JFormattedTextField t1 = new JFormattedTextField();
+//        String num = JOptionPane.showInputDialog("num");
+//        String message = String.format("Welcome, %s, to me", num);
+//        System.out.println("message: " + message);
+//        JOptionPane.showMessageDialog(null, message);
+//    }
+
 
     public static void main(String[] args) {
         new Demogui();
@@ -126,19 +149,19 @@ public class Demogui extends JFrame {
         panelMain.add(spacer2, gbc);
         t1 = new JFormattedTextField();
         t1.setHorizontalAlignment(0);
-        t1.setText("請輸入數量");
+        t1.setText("how many");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
         panelMain.add(t1, gbc);
         t2 = new JFormattedTextField();
-        t2.setText("請輸入數量");
+        t2.setText("how many");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 3;
         panelMain.add(t2, gbc);
         t3 = new JFormattedTextField();
-        t3.setText("請輸入數量");
+        t3.setText("how many");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
         gbc.gridy = 3;

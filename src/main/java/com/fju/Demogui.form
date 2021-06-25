@@ -86,7 +86,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="請輸入數量"/>
+          <text value="how many"/>
         </properties>
       </component>
       <component id="bc898" class="javax.swing.JFormattedTextField" binding="t2">
@@ -97,7 +97,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="請輸入數量"/>
+          <text value="how many"/>
         </properties>
       </component>
       <component id="3204c" class="javax.swing.JFormattedTextField" binding="t3">
@@ -108,7 +108,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="請輸入數量"/>
+          <text value="how many"/>
         </properties>
       </component>
       <hspacer id="85e95">
