@@ -5,52 +5,58 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class Demogui extends JFrame {
 
-    private JButton appleJuiceButton;
-    private JButton beerButton;
-    private JButton colaButton;
     private JButton okButton;
     private JPanel panelMain;
+    private JLabel ajprice;
+    private JLabel brprice;
+    private JLabel cprice;
+    private JLabel appleJuiceLabel;
+    private JLabel beerLabel;
+    private JLabel colaLabel;
+    private JFormattedTextField t1;
+    private JFormattedTextField t3;
+    private JFormattedTextField t2;
 
     public Demogui() {
+        super("demo");
         $$$setupUI$$$();
-        appleJuiceButton = new JButton();
 
-    }
 
-    private void createUIComponents() {
+        setContentPane(panelMain);
+        Frame frame = new JFrame("vending machine");
+//        frame.setLocation(-1200, -100);
+        frame.setSize(-150, 200);
+//        frame.pack();
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setVisible(true);
 
-        // TODO: place custom component creation code here
-        appleJuiceButton = new JButton();
-        appleJuiceButton.addActionListener(new ActionListener() {
+        okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "hello");
+                JOptionPane.showMessageDialog(null, "How to pay?");
             }
         });
     }
 
+    public boolean verfy(JComponent component) {
 
-//    public Demogui() {
-//        super("demo");
-//        setContentPane(panelMain);
-//        Frame frame = new JFrame("vending machine");
-//        frame.setLocation(200, 100);
-//        frame.setSize(1000, 500);
-//        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//        setVisible(true);
-//    }
+        JFormattedTextField t1 = (JFormattedTextField) component;
+        return false;
+    }
 
     public static void main(String[] args) {
+        new Demogui();
 
-        JFrame frame = new JFrame("vending machine");
-        frame.setLocation(200, 100);
-        frame.setSize(1500, 200);
-        frame.setContentPane(new Demogui().panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+//        JFrame frame = new JFrame("vending machine");
+//        frame.setLocation(200, 100);
+//        frame.setSize(1500, 200);
+//        frame.setContentPane(new Demogui().panelMain);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.pack();
+//        frame.setVisible(true);
     }
 
     /**
@@ -61,42 +67,93 @@ public class Demogui extends JFrame {
      * @noinspection ALL
      */
     private void $$$setupUI$$$() {
-        createUIComponents();
         panelMain = new JPanel();
         panelMain.setLayout(new GridBagLayout());
-        appleJuiceButton.setEnabled(true);
-        appleJuiceButton.setHideActionText(false);
-        appleJuiceButton.setText("apple juice");
+        brprice = new JLabel();
+        brprice.setText("$200");
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 2;
+        panelMain.add(brprice, gbc);
+        cprice = new JLabel();
+        cprice.setText("$20");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 6;
+        gbc.gridy = 2;
+        panelMain.add(cprice, gbc);
+        ajprice = new JLabel();
+        ajprice.setHorizontalAlignment(0);
+        ajprice.setText("$25");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        panelMain.add(ajprice, gbc);
+        colaLabel = new JLabel();
+        colaLabel.setHorizontalAlignment(0);
+        colaLabel.setText("cola");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 6;
+        gbc.gridy = 0;
+        panelMain.add(colaLabel, gbc);
+        beerLabel = new JLabel();
+        beerLabel.setHorizontalAlignment(0);
+        beerLabel.setText("beer");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 0;
+        panelMain.add(beerLabel, gbc);
+        appleJuiceLabel = new JLabel();
+        appleJuiceLabel.setHorizontalAlignment(0);
+        appleJuiceLabel.setText("apple juice");
+        gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
-        panelMain.add(appleJuiceButton, gbc);
+        panelMain.add(appleJuiceLabel, gbc);
         final JPanel spacer1 = new JPanel();
         gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.VERTICAL;
-        panelMain.add(spacer1, gbc);
-        beerButton = new JButton();
-        beerButton.setText("Beer");
-        gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelMain.add(beerButton, gbc);
-        colaButton = new JButton();
-        colaButton.setText("Cola");
+        panelMain.add(spacer1, gbc);
+        final JPanel spacer2 = new JPanel();
         gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 0;
+        gbc.gridx = 4;
+        gbc.gridy = 1;
+        gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelMain.add(colaButton, gbc);
+        panelMain.add(spacer2, gbc);
+        t1 = new JFormattedTextField();
+        t1.setHorizontalAlignment(0);
+        t1.setText("請輸入數量");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        panelMain.add(t1, gbc);
+        t2 = new JFormattedTextField();
+        t2.setText("請輸入數量");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 3;
+        panelMain.add(t2, gbc);
+        t3 = new JFormattedTextField();
+        t3.setText("請輸入數量");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 6;
+        gbc.gridy = 3;
+        panelMain.add(t3, gbc);
+        final JPanel spacer3 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 4;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(spacer3, gbc);
         okButton = new JButton();
         okButton.setText("ok");
         gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 2;
+        gbc.gridx = 3;
+        gbc.gridy = 5;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(okButton, gbc);
     }
@@ -107,17 +164,6 @@ public class Demogui extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return panelMain;
     }
-
-
-//    private void createUIComponents() {
-//        // TODO: place custom component creation code here
-//        appleJuiceButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                JOptionPane.showMessageDialog(null, "hello");
-//            }
-//        });
-//    }
 
 }
 
