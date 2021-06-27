@@ -2,18 +2,11 @@ package com.fju;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
+import java.awt.event.*;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
-import java.text.NumberFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 public class Demogui extends Tester {
@@ -30,8 +23,15 @@ public class Demogui extends Tester {
     public JFormattedTextField t3;
     public JFormattedTextField t2;
     private JButton payForBankButton;
-    private Object Total;
 
+//    public boolean verify(JComponent component) {
+//        JFormattedTextField field1 = (JFormattedTextField) component;
+//        return field1.isEditValid();
+//    }
+
+    public void setT1() {
+        int numt1 = Integer.parseInt(t1.getText());
+    }
 
     public Demogui() {
         super();
@@ -40,29 +40,26 @@ public class Demogui extends Tester {
         ((JFrame) frame).setContentPane(panelMain);
         ((JFrame) frame).setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        String s1 = new String(String.valueOf(t1));
+        // String s1 = new String(String.valueOf(t1));
+
+//        String t1 = Demogui.this.t1.getText();
+//        int num1 = Integer.parseInt(t1);
 
 
 //        ok buttom setting
+
+
         okButton.addActionListener(new ActionListener() {
-            @Override
+            //            @Override
+//            int numt1;
+//            Integer t1 = Integer.parseInt(ajprice.getText());
+//            public void setT1() {
+//                int numt1 = Integer.parseInt(t1.getText());
+//            }
+
             public void actionPerformed(ActionEvent actionEvent) {
-                try {
-
-                    int order = JOptionPane.showConfirmDialog(null, "Here is your order" + "\n" + "Applejuice : " + t1.getValue() + "\n" + "Beer : " + t2.getValue() + "\n" + "Cola : " + t3.getValue() + "\n" + "Total" + Total, "Order", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
-
-
-
-//                    JOptionPane.showMessageDialog(null, "num only", "num ok?", JOptionPane.ERROR_MESSAGE);
-                } catch (NumberFormatException e) {
-                }
-//
+                int order = JOptionPane.showConfirmDialog(null, "Here is your order" + "\n" + "Applejuice : " + t1.getText() + "\n" + "Beer : " + t2.getText() + "\n" + "Cola : " + t3.getText() + "\n", "Order", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
             }
-//
-
-//}
-
-
 
 
 //    public void message() {
@@ -97,12 +94,12 @@ public class Demogui extends Tester {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                        Desktop.getDesktop().browse(new URI("https://www.cathaybk.com.tw/MyBank"));
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    } catch (URISyntaxException uriSyntaxException) {
-                        uriSyntaxException.printStackTrace();
-                    }
+                    Desktop.getDesktop().browse(new URI("https://www.cathaybk.com.tw/MyBank"));
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (URISyntaxException uriSyntaxException) {
+                    uriSyntaxException.printStackTrace();
+                }
 
             }
         });
@@ -126,35 +123,35 @@ public class Demogui extends Tester {
         gbc.gridy = 2;
         panelMain.add(brprice, gbc);
         cprice = new JLabel();
-        cprice.setText("$20");
+        cprice.setText("$300");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
         gbc.gridy = 2;
         panelMain.add(cprice, gbc);
         ajprice = new JLabel();
         ajprice.setHorizontalAlignment(0);
-        ajprice.setText("$25");
+        ajprice.setText("$250");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         panelMain.add(ajprice, gbc);
         colaLabel = new JLabel();
         colaLabel.setHorizontalAlignment(0);
-        colaLabel.setText("cola");
+        colaLabel.setText("Cocktail");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
         gbc.gridy = 0;
         panelMain.add(colaLabel, gbc);
         beerLabel = new JLabel();
         beerLabel.setHorizontalAlignment(0);
-        beerLabel.setText("beer");
+        beerLabel.setText("Beer");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 0;
         panelMain.add(beerLabel, gbc);
         appleJuiceLabel = new JLabel();
         appleJuiceLabel.setHorizontalAlignment(0);
-        appleJuiceLabel.setText("apple juice");
+        appleJuiceLabel.setText("Alcohol");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -174,13 +171,17 @@ public class Demogui extends Tester {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(spacer2, gbc);
         t2 = new JFormattedTextField();
-        t2.setText("how many");
+        t2.setColumns(7);
+        t2.setHorizontalAlignment(0);
+        t2.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 3;
         panelMain.add(t2, gbc);
         t3 = new JFormattedTextField();
-        t3.setText("how many");
+        t3.setColumns(7);
+        t3.setHorizontalAlignment(0);
+        t3.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
         gbc.gridy = 3;
@@ -192,7 +193,9 @@ public class Demogui extends Tester {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(spacer3, gbc);
         t1 = new JFormattedTextField();
-        t1.setText("how many");
+        t1.setColumns(7);
+        t1.setHorizontalAlignment(0);
+        t1.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
@@ -225,4 +228,5 @@ public class Demogui extends Tester {
     public JComponent $$$getRootComponent$$$() {
         return panelMain;
     }
-};
+
+}

@@ -22,7 +22,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="$20"/>
+          <text value="$300"/>
         </properties>
       </component>
       <component id="4bd18" class="javax.swing.JLabel" binding="ajprice">
@@ -32,7 +32,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="$25"/>
+          <text value="$250"/>
         </properties>
       </component>
       <component id="51841" class="javax.swing.JLabel" binding="colaLabel">
@@ -42,7 +42,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="cola"/>
+          <text value="Cocktail"/>
         </properties>
       </component>
       <component id="b860d" class="javax.swing.JLabel" binding="beerLabel">
@@ -52,7 +52,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="beer"/>
+          <text value="Beer"/>
         </properties>
       </component>
       <component id="ed3c0" class="javax.swing.JLabel" binding="appleJuiceLabel">
@@ -62,7 +62,7 @@
         </constraints>
         <properties>
           <horizontalAlignment value="0"/>
-          <text value="apple juice"/>
+          <text value="Alcohol"/>
         </properties>
       </component>
       <hspacer id="9d9e5">
@@ -85,7 +85,9 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="how many"/>
+          <columns value="7"/>
+          <horizontalAlignment value="0"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="3204c" class="javax.swing.JFormattedTextField" binding="t3">
@@ -96,7 +98,9 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="how many"/>
+          <columns value="7"/>
+          <horizontalAlignment value="0"/>
+          <text value=""/>
         </properties>
       </component>
       <hspacer id="85e95">
@@ -113,7 +117,9 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="how many"/>
+          <columns value="7"/>
+          <horizontalAlignment value="0"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="8f4ef" class="javax.swing.JButton" binding="okButton" default-binding="true">

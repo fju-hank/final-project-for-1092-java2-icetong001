@@ -1,8 +1,9 @@
 package com.fju;
 
-public class Priceb extends Total{
-    public void Priceb(){
-     price=200;
-     drink="Beer";
+public class Priceb extends Drinks {
+    public Priceb(){
+        drink="Beer";
+        price=200;
+
     }
 }
