@@ -1,7 +1,12 @@
 package com.fju;
 
-public class Total {
+public class Total extends Demogui{
     int price;
     String drink;
-
+    int t1;
+int Total;
+public void Total(){
+    Total=t1*20;
 }
+}
+

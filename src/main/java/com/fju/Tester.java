@@ -5,7 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
-public class Tester {
+public class Tester{
     public static void main(String[] args) {
 
 
@@ -18,6 +18,10 @@ public class Tester {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             frame.setVisible(true);
+
+
+
+
             new Demogui();
 
 
